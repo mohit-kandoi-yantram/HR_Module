@@ -1,0 +1,29 @@
+'use client';
+import { Button } from '@nextui-org/react';
+import React, { useState } from 'react';
+import TableOfStaffDetails from './tableStaffDetail';
+import Popup from '../inputPopupForm/popup';
+
+const Profiles = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+  return (
+    <div className="text-black">
+      <div className="flex justify-between">
+        <p className="text-lg font-bold">Profiles</p>
+        <Button
+          color="primary"
+          className="text-sm text-white bg-blue-800 rounded-full"
+          onClick={() => setOpenPopup(true)}
+        >
+          + Add Staff
+        </Button>
+      </div>
+      <div className="bg-slate-100 mt-2">
+        <TableOfStaffDetails />
+        <Popup openPopup={openPopup} setOpenPopup={setOpenPopup} />
+      </div>
+    </div>
+  );
+};
+
+export default Profiles;
