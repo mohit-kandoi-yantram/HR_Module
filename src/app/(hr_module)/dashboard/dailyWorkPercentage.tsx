@@ -15,19 +15,10 @@ const DailyWorkPercentage = () => {
   const [selectedDate, setSelectedDate] = useState<DateValue | null>();
 
   const handleDateChange = (date: DateValue | null) => {
-    // console.log('/////////');
-    // console.log(date);
-    // console.log(selectedDate);
     setSelectedDate(date);
   };
-  // const [calenderSelectedDate, setCalenderSelectedDate] = useState<Date | null>(new Date());
-
-  // const handleDateChange = (date: Date | null) => {
-  //   setSelectedDate(date);
-  // };
-
   return (
-    <div className="grid grid-cols-3 gap-6 p-4">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 p-4">
       <div>
         <Card className="bg-blue-50 rounded-2xl">
           <div className="text-center">
@@ -53,49 +44,27 @@ const DailyWorkPercentage = () => {
             </PieChart>
           </div>
         </Card>
-        {/* <Card>
-          <div className="relative">
-            <div className="absolute top-0 left-0">
-              <PieChart width={300} height={300}>
-                <Pie
-                  data={data}
-                  cx="50%"
-                  cy="50%"
-                  outerRadius={80}
-                  fill="#8884d8"
-                  dataKey="value"
-                  label
-                >
-                  {data.map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={COLORS[index % COLORS.length]}
-                    />
-                  ))}
-                </Pie>
-                <Legend
-                  align="right"
-                  verticalAlign="middle"
-                  layout="vertical"
-                  wrapperStyle={{ left: '120px', top: '60px' }}
-                />
-              </PieChart>
-            </div>
-          </div>
-        </Card> */}
       </div>
-      <div>
-        <Card className="bg-blue-50 rounded-2xl">
-          <div className="text-center">
-            <Calendar
-              value={selectedDate}
-              onChange={handleDateChange}
-              showMonthAndYearPickers
-              aria-label="Date (Uncontrolled)"
-              defaultValue={parseDate('2020-02-03')}
-            />
-          </div>
-        </Card>
+      <div className="text-center">
+        <Calendar
+          value={selectedDate}
+          onChange={handleDateChange}
+          showMonthAndYearPickers
+          aria-label="Date (Uncontrolled)"
+          defaultValue={parseDate('2023-02-03')}
+          classNames={{
+            content: 'bg-blue-50',
+            gridHeaderRow: 'bg-blue-50 text-black',
+            gridHeader: 'shadow-none',
+            gridWrapper: 'bg-blue-50',
+            headerWrapper: 'bg-blue-50',
+            header: 'bg-blue-50',
+            pickerHighlight: 'bg-white',
+            title: 'text-black',
+            nextButton: 'text-black bg-gray-200',
+            prevButton: 'text-black  bg-gray-200',
+          }}
+        />
       </div>
     </div>
   );

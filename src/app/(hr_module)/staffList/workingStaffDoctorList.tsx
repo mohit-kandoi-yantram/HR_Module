@@ -98,13 +98,16 @@ const WorkingStaffDoctorList = () => {
         </Button>
       </div>
       <div>
-        <Table aria-label="Example table with custom cells">
+        <Table
+          className="mt-2"
+          classNames={{
+            thead: 'bg-white',
+            th: 'bg-blue-50',
+          }}
+        >
           <TableHeader columns={columns}>
             {(column) => (
-              <TableColumn
-                key={column.uid}
-                align={column.uid === 'actions' ? 'center' : 'start'}
-              >
+              <TableColumn key={column.uid} align={'start'}>
                 {column.name}
               </TableColumn>
             )}

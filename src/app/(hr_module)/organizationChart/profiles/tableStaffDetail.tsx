@@ -58,10 +58,10 @@ export default function TableOfStaffDetails() {
 
   return (
     <Table
-      aria-label="Controlled table example with dynamic content"
-      selectionMode="multiple"
-      selectedKeys={selectedKeys}
-      //   onSelectionChange={setSelectedKeys}
+      classNames={{
+        thead: 'bg-white',
+        th: 'bg-blue-50',
+      }}
     >
       <TableHeader columns={columns}>
         {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}

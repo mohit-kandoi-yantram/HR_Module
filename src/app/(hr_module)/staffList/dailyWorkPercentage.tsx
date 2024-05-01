@@ -1,5 +1,6 @@
-import { Card, Calendar } from '@nextui-org/react';
+import { Card, Calendar, DateValue } from '@nextui-org/react';
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
+import { parseDate } from '@internationalized/date';
 import { useState } from 'react';
 
 const data = [
@@ -10,14 +11,14 @@ const data = [
 const COLORS = ['#0088FE', '#00C49F'];
 
 const DailyWorkPercentage = () => {
-  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
+  const [selectedDate, setSelectedDate] = useState<DateValue | null>();
 
-  const handleDateChange = (date: Date | null) => {
+  const handleDateChange = (date: DateValue | null) => {
     setSelectedDate(date);
   };
 
   return (
-    <div className="grid grid-cols-3 gap-6 p-4">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 p-4">
       <div>
         <Card className="bg-blue-50 rounded-2xl">
           <div className="text-center">
@@ -44,15 +45,26 @@ const DailyWorkPercentage = () => {
           </div>
         </Card>
       </div>
-      <div>
-        <Card className="bg-blue-50 rounded-2xl">
-          <div className="text-center">
-            <Calendar
-              aria-label="Date (Show Month and Year Picker)"
-              showMonthAndYearPickers
-            />
-          </div>
-        </Card>
+      <div className="text-center">
+        <Calendar
+          value={selectedDate}
+          onChange={handleDateChange}
+          showMonthAndYearPickers
+          aria-label="Date (Uncontrolled)"
+          defaultValue={parseDate('2023-02-03')}
+          classNames={{
+            content: 'bg-blue-50',
+            gridHeaderRow: 'bg-blue-50 text-black',
+            gridHeader: 'shadow-none',
+            gridWrapper: 'bg-blue-50',
+            headerWrapper: 'bg-blue-50',
+            header: 'bg-blue-50',
+            pickerHighlight: 'bg-white',
+            title: 'text-black',
+            nextButton: 'text-black bg-gray-200',
+            prevButton: 'text-black  bg-gray-200',
+          }}
+        />
       </div>
     </div>
   );

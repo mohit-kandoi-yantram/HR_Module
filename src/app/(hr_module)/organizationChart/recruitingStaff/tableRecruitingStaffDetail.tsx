@@ -54,15 +54,8 @@ import { rows, columns } from './data';
 // ];
 
 export default function TableOfRecruitingStaff() {
-  const [selectedKeys, setSelectedKeys] = React.useState(new Set(['2']));
-
   return (
-    <Table
-      aria-label="Controlled table example with dynamic content"
-      selectionMode="multiple"
-      selectedKeys={selectedKeys}
-      //   onSelectionChange={setSelectedKeys}
-    >
+    <Table>
       <TableHeader columns={columns}>
         {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
       </TableHeader>

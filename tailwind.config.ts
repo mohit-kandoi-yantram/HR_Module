@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss';
 
-// const { nextui } = require('@nextui-org/react');
+const { nextui } = require('@nextui-org/react');
 
 const config: Config = {
   content: [
@@ -19,6 +19,7 @@ const config: Config = {
     },
   },
   darkMode: 'class',
+  plugins: [nextui()],
   // plugins: [nextui(), require('@shrutibalasa/tailwind-grid-auto-fit')],
 };
 export default config;

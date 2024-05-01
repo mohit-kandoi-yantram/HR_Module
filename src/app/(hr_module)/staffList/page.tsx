@@ -71,7 +71,7 @@ const DashBoard = () => {
       {/* <p className="ml-3 font-bold text-lg">DashBoard</p> */}
       {/* DropDown Div for Daily Work Percentage */}
       <div
-        className="flex justify-between bg-blue-200 rounded-full p-2"
+        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickDailyWorkPercentage}
       >
         <p className="text-sm font-semibold ml-3">Daily Work Percentage</p>
@@ -90,7 +90,7 @@ const DashBoard = () => {
 
       {/* DropDown for WORKING STAFF DOCTOR LIST */}
       <div
-        className="flex justify-between bg-blue-200 rounded-full p-2"
+        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickWorkingStaffDoctorList}
       >
         <p className="text-sm font-semibold ml-3">Working Staff Doctors List</p>
@@ -106,7 +106,7 @@ const DashBoard = () => {
 
       {/* DropDown for WORKING STAFF NURSING LIST */}
       <div
-        className="flex justify-between bg-blue-200 rounded-full p-2"
+        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickWorkingStaffNursingList}
       >
         <p className="text-sm font-semibold ml-3">Working Staff Nursing List</p>
@@ -124,7 +124,7 @@ const DashBoard = () => {
 
       {/* DropDown for WORKING STAFF WARD BOYS / GIRLS LIST */}
       <div
-        className="flex justify-between bg-blue-200 rounded-full p-2"
+        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickWorkingStaffWardBoyGirlList}
       >
         <p className="text-sm font-semibold ml-3">
@@ -144,7 +144,7 @@ const DashBoard = () => {
 
       {/* DropDown for WORKING PHARMACY STAFF LIST */}
       <div
-        className="flex justify-between bg-blue-200 rounded-full p-2"
+        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickWorkingPharmacyStaffList}
       >
         <p className="text-sm font-semibold ml-3">
@@ -164,7 +164,7 @@ const DashBoard = () => {
 
       {/* DropDown for WORKING NON TECHNICAL STAFF LIST */}
       <div
-        className="flex justify-between bg-blue-200 rounded-full p-2"
+        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickWorkingNonTechnicalStaffList}
       >
         <p className="text-sm font-semibold ml-3">
@@ -186,7 +186,7 @@ const DashBoard = () => {
 
       {/* DropDown for WORKING TECHNICAL STAFF LIST */}
       <div
-        className="flex justify-between bg-blue-200 rounded-full p-2"
+        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickWorkingTechnicalStaffList}
       >
         <p className="text-sm font-semibold ml-3">

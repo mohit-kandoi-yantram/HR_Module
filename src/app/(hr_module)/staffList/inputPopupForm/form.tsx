@@ -35,8 +35,6 @@ export default function InputForm(props: { setOpenPopup: any }) {
           type="text"
           label="Employee ID"
           name="employeeId"
-          labelPlacement="outside-left"
-          placeholder="Enter ID"
           variant="bordered"
           onChange={handleInputChange}
           fullWidth
@@ -45,8 +43,6 @@ export default function InputForm(props: { setOpenPopup: any }) {
           type="name"
           label="Name"
           name="name"
-          labelPlacement="outside-left"
-          placeholder="Enter Name"
           variant="bordered"
           onChange={handleInputChange}
         />
@@ -54,8 +50,6 @@ export default function InputForm(props: { setOpenPopup: any }) {
           type="email"
           label="E-mail"
           name="email"
-          labelPlacement="outside-left"
-          placeholder="Enter E-mail"
           variant="bordered"
           onChange={handleInputChange}
         />
@@ -63,8 +57,7 @@ export default function InputForm(props: { setOpenPopup: any }) {
           label="Contact No"
           type="text"
           name="contactNo"
-          labelPlacement="outside-left"
-          placeholder="Enter Contact No"
+          variant="bordered"
           onChange={handleInputChange}
         />
 
@@ -72,8 +65,7 @@ export default function InputForm(props: { setOpenPopup: any }) {
           type="text"
           label="Department"
           name="department"
-          labelPlacement="outside-left"
-          placeholder="Enter Department"
+          variant="bordered"
           onChange={handleInputChange}
         />
         <div className="flex justify-evenly">

@@ -97,7 +97,13 @@ const WorkingPharmacyStaffList = () => {
         </Button>
       </div>
       <div>
-        <Table aria-label="Example table with custom cells">
+        <Table
+          className="mt-2"
+          classNames={{
+            thead: 'bg-white',
+            th: 'bg-blue-50',
+          }}
+        >
           <TableHeader columns={columns}>
             {(column) => (
               <TableColumn

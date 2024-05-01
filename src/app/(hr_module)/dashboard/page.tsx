@@ -63,7 +63,7 @@ const DashBoard = () => {
       <p className="ml-3 font-bold text-lg">DashBoard</p>
       {/* DropDown Div for Daily Work Percentage */}
       <div
-        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer"
+        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickDailyWorkPercentage}
       >
         <p className="text-sm font-semibold ml-3">Daily Work Percentage</p>
@@ -82,7 +82,7 @@ const DashBoard = () => {
 
       {/* DropDown for Ward Wise Staff */}
       <div
-        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer"
+        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickWardWiseStaff}
       >
         <p className="text-sm font-semibold ml-3">Ward Wise Staff</p>
@@ -99,7 +99,7 @@ const DashBoard = () => {
 
       {/* Dropdown for Working Hour Overview */}
       <div
-        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer"
+        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickWorkingHour}
       >
         <p className="text-sm font-semibold ml-3">WorkingHourOverview</p>
@@ -109,7 +109,7 @@ const DashBoard = () => {
           }
         />
       </div>
-      <div className="grid grid-cols-3 gap-6 p-4">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 p-4">
         {expandedWorkingHour &&
           items.map((item) => <WorkingHour key={item.id} item={item} />)}
         {/* <DailyWorkPercentage /> */}

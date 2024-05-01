@@ -24,7 +24,7 @@ const LeaveManagement = () => {
 
       {/* DropDown Div for Leave Details */}
       <div
-        className="flex justify-between bg-blue-200 rounded-full p-2"
+        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickLeaveDetails}
       >
         <p className="text-sm font-semibold ml-3">Leave Details</p>
@@ -38,7 +38,7 @@ const LeaveManagement = () => {
 
       {/* DropDown for Alerts */}
       <div
-        className="flex justify-between bg-blue-200 rounded-full p-2"
+        className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickAlerts}
       >
         <p className="text-sm font-semibold ml-3">Alerts</p>

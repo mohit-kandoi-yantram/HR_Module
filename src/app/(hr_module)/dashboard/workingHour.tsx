@@ -2,17 +2,14 @@ import { Card, Calendar } from '@nextui-org/react';
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 import { useState } from 'react';
 import { WorkingHourItems } from '@/app/type/interface';
-import WorkingHourModal from './workingHourModal';
-// import { any } from 'zod';
-// import { Modal, ModalHeader } from 'reactstrap';
-// import 'bootstrap/dist/css/bootstrap.css';
+import Popup from './workingHour_ViewMore/popup.js';
 
 const COLORS = ['#0088FE', '#00C49F'];
 
 const WorkingHour = ({ item }: { item: WorkingHourItems }) => {
+  const [openPopup, setOpenPopup] = useState(false);
   const { name, workingHour } = item;
   const totalHours = 10; //could be anything.
-  //   const nonWorkingHour = totalHours - workingHour;
 
   const data = [
     { name: 'WorkingHours', value: workingHour },
@@ -47,13 +44,15 @@ const WorkingHour = ({ item }: { item: WorkingHourItems }) => {
             </PieChart>
             <p
               className="text-gray-700 cursor-pointer flex justify-end"
-              onClick={() => {
-                setOpenModel(!openModal);
-              }}
+              onClick={() => setOpenPopup(true)}
             >
               View More..
             </p>
-            {openModal && <WorkingHourModal />}
+            <Popup
+              openPopup={openPopup}
+              setOpenPopup={setOpenPopup}
+              title={name}
+            ></Popup>
           </div>
         </Card>
       </div>
