@@ -97,7 +97,7 @@ const WorkingNonTechnicalStaffList = () => {
         </Button>
       </div>
       <div>
-      <Table
+        <Table
           className="mt-2"
           classNames={{
             thead: 'bg-white',
@@ -106,10 +106,7 @@ const WorkingNonTechnicalStaffList = () => {
         >
           <TableHeader columns={columns}>
             {(column) => (
-              <TableColumn
-                key={column.uid}
-                align={column.uid === 'actions' ? 'center' : 'start'}
-              >
+              <TableColumn key={column.uid} align={'start'}>
                 {column.name}
               </TableColumn>
             )}

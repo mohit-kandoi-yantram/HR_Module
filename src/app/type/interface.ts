@@ -25,3 +25,18 @@ export interface FormData {
   contactNo: string;
   department: string;
 }
+export interface AlertDataColumn {
+  name: string;
+  uid: string;
+}
+
+export interface AlertDataUser {
+  avatar: string;
+  name: string;
+  department: string;
+  id: number;
+  period: string;
+  contactNo: string;
+  email: string;
+  typeOfLeave: string;
+}
