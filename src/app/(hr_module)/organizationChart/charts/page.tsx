@@ -20,14 +20,24 @@ const data = {
 
 const ExampleTree = () => (
   <>
-    {/* <Tree label={<Avatar src={users[0].avatar} />}>
+    <Tree label={<Avatar src={users[0].avatar} />}>
       <TreeNode label={<Avatar src={users[0].avatar} />}>
-        <TreeNode label={<Avatar src={users[0].avatar} />} />
+        <TreeNode label={<Avatar src={users[0].avatar} />}>
+          <TreeNode label={<Avatar src={users[0].avatar} />}>
+            <TreeNode label={<Avatar src={users[0].avatar} />}>
+              <TreeNode label={<Avatar src={users[0].avatar} />}>
+                <TreeNode label={<Avatar src={users[0].avatar} />} />
+              </TreeNode>
+            </TreeNode>
+          </TreeNode>
+        </TreeNode>
         <TreeNode label={<Avatar src={users[0].avatar} />} />
       </TreeNode>
-      <TreeNode label={<Avatar src={users[0].avatar} />}></TreeNode>
-    </Tree> */}
-    <div>Organization Chart</div>
+      <TreeNode label={<Avatar src={users[0].avatar} />}>
+        <TreeNode label={<Avatar src={users[0].avatar} />} />
+      </TreeNode>
+    </Tree>
+    {/* <div>Organization Chart</div> */}
   </>
 );
 export default ExampleTree;

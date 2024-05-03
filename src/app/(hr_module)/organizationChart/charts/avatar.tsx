@@ -13,13 +13,13 @@ const Avatar: React.FC<AvatarProps> = ({ src }) => {
     //     <img src={src} alt="Avatar" className="w-full h-full object-cover" />
     //   </div>
     // </div>
-    <div className="bg-slate-100  h-20 w-44 border-t-large border-blue-800">
+    <div className="bg-slate-100 m-auto mt-5 h-20 w-44 border-t-large border-blue-800">
       <img
         src={src}
         alt="image"
         className="absolute size-12 transform translate-x-16 -translate-y-6"
       />
-      <h1 className="mt-6 text-center font-bold">Mohit kandoi</h1>
+      <h1 className="mt-6 text-center font-bold">Mukesh Ambani</h1>
       <h2 className="text-center">CEO</h2>
     </div>
   );

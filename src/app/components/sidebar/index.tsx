@@ -66,7 +66,7 @@ const items: SidebarItems[] = [
 
 const Sidebar = () => {
   return (
-    <div className="fixed top-0 left-0 h-screen w-60 shadow-lg z-10 bg-white">
+    <div className="fixed top-0 left-0 h-screen w-60 shadow-lg z-10 bg-orange-50">
       <div className="flex justify-center items-center bg-white">
         <img
           src="https://media.licdn.com/dms/image/C4D0BAQERWgqpQAfvww/company-logo_200_200/0/1639741901981?e=2147483647&v=beta&t=lKPRZ6GRlKFOShej0j5hPsWKZb7FMFDnSQqOCMaqa_E"
