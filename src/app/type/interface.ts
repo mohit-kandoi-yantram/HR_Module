@@ -40,3 +40,10 @@ export interface AlertDataUser {
   email: string;
   typeOfLeave: string;
 }
+
+export interface Employee {
+  id: number;
+  name: string;
+  title: string;
+  subordinates?: Employee[];
+}

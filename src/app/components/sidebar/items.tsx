@@ -18,7 +18,7 @@ const SidebarItem = ({ item }: { item: SidebarItems }) => {
 
   const pathname = usePathname();
   const isActive = useMemo(() => {
-    console.log('path: ' + path + ' pathname: ' + pathname);
+    // console.log('path: ' + path + ' pathname: ' + pathname);
     return path.split('/')[1] === pathname.split('/')[1];
     // READ ABOUT REDUX OR RECOIL
   }, [path, pathname]);

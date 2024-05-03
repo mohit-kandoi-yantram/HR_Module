@@ -25,75 +25,6 @@ interface User {
 // User = (typeof users)[0];
 
 const Alerts = () => {
-  // const renderCell = React.useCallback((user: User, columnKey: React.Key) => {
-  //   const cellValue = user[columnKey as keyof User];
-
-  // switch (columnKey) {
-  //   case 'name':
-  //     return (
-  //       <div
-  //         avatarProps={{ radius: 'lg', src: user.avatar }}
-  //         name={cellValue}
-  //       ></div>
-  //     );
-  //   case 'department':
-  //     return (
-  //       <div className="flex flex-col">
-  //         <p className="text-bold text-sm capitalize">{cellValue}</p>
-  //         {/* <p className="text-bold text-sm capitalize text-default-400">
-  //               {user.team}
-  //             </p> */}
-  //       </div>
-  //     );
-  //   case 'id':
-  //     return (
-  //       <div className="flex flex-col">
-  //         <p className="text-bold text-sm capitalize">{cellValue}</p>
-  //         {/* <p className="text-bold text-sm capitalize text-default-400">
-  //               {user.team}
-  //             </p> */}
-  //       </div>
-  //     );
-  //   case 'period':
-  //     return (
-  //       <div className="flex flex-col">
-  //         <p className="text-bold text-sm capitalize">{cellValue}</p>
-  //         {/* <p className="text-bold text-sm capitalize text-default-400">
-  //                 {user.team}
-  //               </p> */}
-  //       </div>
-  //     );
-  //   case 'contactNo':
-  //     return (
-  //       <div className="flex flex-col">
-  //         <p className="text-bold text-sm capitalize">{cellValue}</p>
-  //         {/* <p className="text-bold text-sm capitalize text-default-400">
-  //                     {user.team}
-  //                   </p> */}
-  //       </div>
-  //     );
-  //   case 'email':
-  //     return (
-  //       <div className="flex flex-col">
-  //         <p className="text-bold text-sm capitalize">{cellValue}</p>
-  //         {/* <p className="text-bold text-sm capitalize text-default-400">
-  //               {user.team}
-  //             </p> */}
-  //       </div>
-  //     );
-  //   case 'typeOfLeave':
-  //     return (
-  //       <div className="flex flex-col">
-  //         <p className="text-bold text-sm capitalize">{cellValue}</p>
-  //         {/* <p className="text-bold text-sm capitalize text-default-400">
-  //               {user.team}
-  //             </p> */}
-  //       </div>
-  //     );
-  //   default:
-  //     return cellValue;
-  // }
-
   return (
     <div className="container">
       <Card>
@@ -117,7 +48,7 @@ const Alerts = () => {
             >
               <div className="grid grid-cols-7 gap-4 py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/40 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset]">
                 {columns.map((column, idx) => (
-                  <span key={idx}>{user[column.uid as keyof User]}</span>
+                  <div key={idx}>{user[column.uid as keyof User]}</div>
                 ))}
               </div>
               <div className="flex justify-end gap-4 pr-10">
@@ -148,32 +79,7 @@ const Alerts = () => {
         </div>
       </Card>
     </div>
-    // <Table
-    //   classNames={{
-    //     thead: 'bg-white',
-    //     th: 'bg-blue-50',
-    //   }}
-    // >
-    //   <TableHeader columns={columns}>
-    //     {(column) => (
-    //       <TableColumn key={column.uid} align={'start'}>
-    //         {column.name}
-    //       </TableColumn>
-    //     )}
-    //   </TableHeader>
-    //   <TableBody items={users}>
-    //     {(item) => (
-    //       <TableRow key={item.id}>
-    //         {(columnKey) => (
-    //           <TableCell>
-    //             {renderCell(item, columnKey)}
-    //             {/* {columnKey === 'email' ? <Button>{columnKey}</Button> : null} */}
-    //           </TableCell>
-    //         )}
-    //       </TableRow>
-    //     )}
-    //   </TableBody>
-    // </Table>
+    // className="grid grid-cols-7 auto-cols-fr gap-4 py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/40 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset]">
   );
 };
 

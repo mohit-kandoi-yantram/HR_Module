@@ -1,7 +1,12 @@
 import React from 'react';
+import MyCalendar from './MyCalendar';
 
-const RosterManagement = () => {
-  return <div className="text-black">Roster Management</div>;
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <MyCalendar />
+    </div>
+  );
 };
 
-export default RosterManagement;
+export default App;
