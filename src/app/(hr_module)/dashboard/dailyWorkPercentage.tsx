@@ -18,9 +18,9 @@ const DailyWorkPercentage = () => {
     setSelectedDate(date);
   };
   return (
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 p-4">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 px-5 mt-2">
       <div>
-        <Card className="bg-blue-50 rounded-2xl">
+        <Card className="shadow-small  rounded-2xl">
           <div className="text-center">
             <PieChart width={420} height={260}>
               <Pie
@@ -45,7 +45,7 @@ const DailyWorkPercentage = () => {
           </div>
         </Card>
       </div>
-      <div className="text-center">
+      <div className="text-center ">
         <Calendar
           value={selectedDate}
           onChange={handleDateChange}
@@ -53,13 +53,13 @@ const DailyWorkPercentage = () => {
           aria-label="Date (Uncontrolled)"
           defaultValue={parseDate('2023-02-03')}
           classNames={{
-            content: 'bg-blue-50',
-            gridHeaderRow: 'bg-blue-50 text-black',
+            content: 'bg-white',
+            gridHeaderRow: 'bg-white text-black',
             gridHeader: 'shadow-none',
-            gridWrapper: 'bg-blue-50',
-            headerWrapper: 'bg-blue-50',
-            header: 'bg-blue-50',
-            pickerHighlight: 'bg-white',
+            gridWrapper: 'bg-white',
+            headerWrapper: 'bg-white',
+            header: 'bg-white',
+            pickerHighlight: 'bg-gray-200',
             title: 'text-black',
             nextButton: 'text-black bg-gray-200',
             prevButton: 'text-black  bg-gray-200',

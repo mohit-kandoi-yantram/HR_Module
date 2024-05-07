@@ -55,7 +55,12 @@ import { rows, columns } from './data';
 
 export default function TableOfResignedStaff() {
   return (
-    <Table>
+    <Table
+      classNames={{
+        thead: 'bg-white',
+        th: 'bg-blue-50',
+      }}
+    >
       <TableHeader columns={columns}>
         {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
       </TableHeader>

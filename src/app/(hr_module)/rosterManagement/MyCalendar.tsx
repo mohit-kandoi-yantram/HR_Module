@@ -125,13 +125,22 @@ const MyCalendar: React.FC = () => {
       >
         <h2 className="text-lg font-bold mb-4">Events</h2>
         <ul>
-          <li className="border-medium bg-white rounded-xl text-center">
+          <li
+            title="Drag & Drop on Calender"
+            className="border-medium bg-white rounded-xl text-center cursor-pointer hover:bg-blue-500"
+          >
             Meeting
           </li>
-          <li className="border-medium bg-white rounded-xl text-center">
+          <li
+            title="Drag & Drop on Calender"
+            className="border-medium bg-white rounded-xl text-center cursor-pointer hover:bg-blue-500"
+          >
             Lunch
           </li>
-          <li className="border-medium bg-white rounded-xl text-center">
+          <li
+            title="Drag & Drop on Calender"
+            className="border-medium bg-white rounded-xl text-center cursor-pointer hover:bg-blue-500"
+          >
             Conference
           </li>
         </ul>

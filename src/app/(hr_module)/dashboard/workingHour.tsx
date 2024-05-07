@@ -18,44 +18,42 @@ const WorkingHour = ({ item }: { item: WorkingHourItems }) => {
   const [openModal, setOpenModel] = useState(false);
   return (
     <div>
-      <div>
-        <p className="font-semibold">{name}</p>
-        <Card className="bg-blue-50 rounded-2xl">
-          <div className="text-center">
-            <PieChart width={420} height={260}>
-              <Pie
-                dataKey="value"
-                data={data}
-                cx="25%"
-                cy="50%"
-                outerRadius={80}
-                innerRadius={65}
-                fill="#8884d8"
-              >
-                {data.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={COLORS[index % COLORS.length]}
-                  />
-                ))}
-              </Pie>
-              <Legend layout="vertical" verticalAlign="bottom" />
-              <Tooltip />
-            </PieChart>
-            <p
-              className="text-gray-700 cursor-pointer flex justify-end"
-              onClick={() => setOpenPopup(true)}
+      <p className="font-semibold mb-4 text-small">{name}</p>
+      <Card className="shadow-small rounded-2xl">
+        <div className="text-center">
+          <PieChart width={420} height={260}>
+            <Pie
+              dataKey="value"
+              data={data}
+              cx="25%"
+              cy="50%"
+              outerRadius={80}
+              innerRadius={65}
+              fill="#8884d8"
             >
-              View More..
-            </p>
-            <Popup
-              openPopup={openPopup}
-              setOpenPopup={setOpenPopup}
-              title={name}
-            ></Popup>
-          </div>
-        </Card>
-      </div>
+              {data.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
+              ))}
+            </Pie>
+            <Legend layout="vertical" verticalAlign="bottom" />
+            <Tooltip />
+          </PieChart>
+          <p
+            className="text-gray-700 cursor-pointer flex justify-end"
+            onClick={() => setOpenPopup(true)}
+          >
+            View More..
+          </p>
+          <Popup
+            openPopup={openPopup}
+            setOpenPopup={setOpenPopup}
+            title={name}
+          ></Popup>
+        </div>
+      </Card>
     </div>
   );
 };

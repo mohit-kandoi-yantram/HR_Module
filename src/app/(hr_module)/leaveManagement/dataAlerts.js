@@ -18,7 +18,7 @@ const users = [
     period: '20-04-2024 to 20-04-2024',
     contactNo: '+911234567890',
     email: 'tony.reichert@example.com',
-    typeOfLeave: 'Medical',
+    typeOfLeave: 'Medical Leave',
   },
   {
     avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
@@ -28,7 +28,7 @@ const users = [
     period: '20-04-2024 to 20-04-2024',
     contactNo: '+911234567890',
     email: 'tony.reichert@example.com',
-    typeOfLeave: 'Medical',
+    typeOfLeave: 'Medical Leave',
   },
   {
     avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
@@ -38,7 +38,7 @@ const users = [
     period: '20-04-2024 to 20-04-2024',
     contactNo: '+911234567890',
     email: 'tony.reichert@example.com',
-    typeOfLeave: 'Medical',
+    typeOfLeave: 'Medical Leave',
   },
 ];
 

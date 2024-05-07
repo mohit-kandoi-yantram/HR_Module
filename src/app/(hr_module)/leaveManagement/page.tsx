@@ -4,8 +4,9 @@ import React, { useState } from 'react';
 // import { BiChevronDown } from 'react-icons/bi';
 import { FaChevronDown } from 'react-icons/fa6';
 import LeaveDetails from './leaveDetails';
-import Alerts from './alerts';
+// import Alerts from './alerts';
 import { columns, users } from './dataLeaveDetails';
+import AlertsTable from './alertsTable';
 
 const LeaveManagement = () => {
   const [expandedAlerts, setExpandedAlerts] = useState(false);
@@ -20,10 +21,10 @@ const LeaveManagement = () => {
   return (
     <div className="text-black ">
       <p className="ml-3 font-bold text-lg">Leave Management</p>
-      <p className="ml-6 font-bold text-md">Leave Staff List</p>
+      <p className="ml-6 font-bold text-md my-4">Leave Staff List</p>
 
       {/* DropDown Div for Leave Details */}
-      <div
+      {/* <div
         className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickLeaveDetails}
       >
@@ -33,11 +34,15 @@ const LeaveManagement = () => {
             expandedLeaveDetails ? 'rotate-180 duration-200 mr-3' : ' mr-3'
           }
         />
+      </div> */}
+      <div className="my-4">
+        <p className="text-sm font-semibold ml-3 mb-4">Leave Details</p>
+        <LeaveDetails />
       </div>
-      <div>{expandedLeaveDetails && <LeaveDetails />}</div>
+      {/* <div>{expandedLeaveDetails && <LeaveDetails />}</div> */}
 
       {/* DropDown for Alerts */}
-      <div
+      {/* <div
         className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickAlerts}
       >
@@ -45,11 +50,15 @@ const LeaveManagement = () => {
         <FaChevronDown
           className={expandedAlerts ? 'rotate-180 duration-200 mr-3' : ' mr-3'}
         />
+      </div> */}
+      <div className="my-4">
+        <p className="text-sm font-semibold ml-3 mb-4">Alerts</p>
+        {/* <Alerts /> */}
+        <AlertsTable />
       </div>
-      <div>
+      {/* <div>
         {expandedAlerts && <Alerts />}
-        {/* <DailyWorkPercentage /> */}
-      </div>
+      </div> */}
 
       {/* Dropdown for Working Hour Overview */}
       {/* <div

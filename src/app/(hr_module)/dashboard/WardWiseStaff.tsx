@@ -34,25 +34,25 @@ const CustomYAxisTick = ({ x, y }: any) => {
 
 const BarChartComponent = () => {
   return (
-    <div className="grid grid-cols-1 p-4">
-      <Card className="bg-blue-50 rounded-3xl mt-2">
+    <div className="grid grid-cols-1 px-5">
+      <Card className=" rounded-3xl mt-2">
         <div
           style={{
             width: '100%',
-            height: 400,
+            height: 350,
             display: 'flex',
             alignItems: 'center',
           }}
         >
           {/* <h2 className="text-xl font-bold mb-4">Bar Chart</h2> */}
-          <ResponsiveContainer width="100%" height={350}>
+          <ResponsiveContainer width="95%" height={350}>
             <BarChart
               width={600}
               height={400}
               data={data}
               barCategoryGap={25}
               barGap={15}
-              margin={{ top: 20, right: 30, left: 20, bottom: 50 }}
+              margin={{ top: 70, right: 30, left: 20, bottom: 50 }}
             >
               <CartesianGrid stroke="transparent" />
               <XAxis
@@ -61,7 +61,7 @@ const BarChartComponent = () => {
                 label={{
                   value: 'Department',
                   position: 'bottom',
-                  offset: 30,
+                  offset: 15,
                 }}
               />
               <YAxis
@@ -71,7 +71,7 @@ const BarChartComponent = () => {
                   value: 'Staff',
                   angle: -90,
                   position: 'left',
-                  offset: -30,
+                  offset: -20,
                 }}
               />
               <Tooltip />

@@ -70,7 +70,7 @@ const DashBoard = () => {
     <div className="text-black ">
       {/* <p className="ml-3 font-bold text-lg">DashBoard</p> */}
       {/* DropDown Div for Daily Work Percentage */}
-      <div
+      {/* <div
         className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickDailyWorkPercentage}
       >
@@ -82,9 +82,11 @@ const DashBoard = () => {
               : ' mr-3'
           }
         />
-      </div>
+      </div> */}
       <div>
-        {expandedDailyWorkPercentage && <DailyWorkPercentage />}
+        <p className="text-sm font-semibold ml-3">Daily Work Percentage</p>
+        <DailyWorkPercentage />
+        {/* {expandedDailyWorkPercentage && <DailyWorkPercentage />} */}
         {/* <DailyWorkPercentage /> */}
       </div>
 

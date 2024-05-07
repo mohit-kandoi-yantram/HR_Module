@@ -62,7 +62,7 @@ const DashBoard = () => {
     <div>
       <p className="ml-3 font-bold text-lg">DashBoard</p>
       {/* DropDown Div for Daily Work Percentage */}
-      <div
+      {/* <div
         className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickDailyWorkPercentage}
       >
@@ -74,14 +74,15 @@ const DashBoard = () => {
               : ' mr-3'
           }
         />
-      </div>
+      </div> */}
       <div>
-        {expandedDailyWorkPercentage && <DailyWorkPercentage />}
-        {/* <DailyWorkPercentage /> */}
+        <p className="text-sm font-semibold ml-3">Daily Work Percentage</p>
+        <DailyWorkPercentage />
+        {/* {expandedDailyWorkPercentage && <DailyWorkPercentage />} */}
       </div>
 
       {/* DropDown for Ward Wise Staff */}
-      <div
+      {/* <div
         className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickWardWiseStaff}
       >
@@ -91,14 +92,16 @@ const DashBoard = () => {
             expandedWardWiseStaff ? 'rotate-180 duration-200 mr-3' : ' mr-3'
           }
         />
-      </div>
+      </div> */}
       <div>
-        {expandedWardWiseStaff && <WardWiseStaff />}
+        <p className="text-sm font-semibold ml-3">Ward Wise Staff</p>
+        <WardWiseStaff />
+        {/* {expandedWardWiseStaff && <WardWiseStaff />} */}
         {/* <DailyWorkPercentage /> */}
       </div>
 
       {/* Dropdown for Working Hour Overview */}
-      <div
+      {/* <div
         className="flex justify-between bg-blue-200 rounded-full p-2 cursor-pointer my-2"
         onClick={onClickWorkingHour}
       >
@@ -108,10 +111,14 @@ const DashBoard = () => {
             expandedWorkingHour ? 'rotate-180 duration-200 mr-3' : ' mr-3'
           }
         />
-      </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 p-4">
-        {expandedWorkingHour &&
-          items.map((item) => <WorkingHour key={item.id} item={item} />)}
+      </div> */}
+      <div className="my-4">
+        <p className="text-sm font-semibold ml-3">WorkingHourOverview</p>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 px-4">
+          {items.map((item) => (
+            <WorkingHour key={item.id} item={item} />
+          ))}
+        </div>
         {/* <DailyWorkPercentage /> */}
       </div>
     </div>
