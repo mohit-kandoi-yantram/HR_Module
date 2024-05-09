@@ -20,7 +20,7 @@ interface MyEvent {
   start: Date | string | any;
   end: Date | string | any;
   allDay?: boolean;
-  isDragged?: boolean; // New property to indicate if event was dragged and dropped
+  // isDragged?: boolean; // New property to indicate if event was dragged and dropped
 }
 
 const MyCalendar: React.FC = () => {
@@ -44,7 +44,7 @@ const MyCalendar: React.FC = () => {
 
   useEffect(() => {
     if (sidebarEventsRef.current && calendarRef.current) {
-      const draggable = new Draggable(sidebarEventsRef.current, {
+      new Draggable(sidebarEventsRef.current, {
         itemSelector: 'li',
         eventData: function (eventEl) {
           return {
@@ -52,7 +52,6 @@ const MyCalendar: React.FC = () => {
           };
         },
       });
-      // draggable.enable();
     }
   }, []);
 
@@ -112,9 +111,9 @@ const MyCalendar: React.FC = () => {
       start: dropInfo.dateStr,
       end: dropInfo.dateStr,
       allDay: true,
-      isDragged: true, // Set the isDragged property for dragged events
+      // isDragged: true, // Set the isDragged property for dragged events
     };
-    setEvents([...events, draggedEvent]);
+    setEvents((prevEvents) => [...prevEvents, draggedEvent]);
   };
 
   return (
@@ -158,13 +157,14 @@ const MyCalendar: React.FC = () => {
           height={'90vh'}
           editable={true}
           selectable={true}
-          selectMirror={true}
+          // selectMirror={true}
           dayMaxEvents={true}
           weekends={true}
           select={handleDateSelect}
           events={events}
           eventClick={handleEventClick}
           eventDrop={handleEventDrop} // Handle dropped events
+          droppable={true}
         />
       </div>
       <Dialog open={open} onClose={handleClose}>
