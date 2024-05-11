@@ -1,6 +1,6 @@
 'use client';
-import React, { useState } from 'react';
 import { Card, CardBody } from '@nextui-org/react';
+import React, { useState } from 'react';
 
 export default function App() {
   const [searchValue, setSearchValue] = useState('');
