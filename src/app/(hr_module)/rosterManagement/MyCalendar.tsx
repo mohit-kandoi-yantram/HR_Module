@@ -117,34 +117,8 @@ const MyCalendar: React.FC = () => {
   };
 
   return (
-    <div className="flex">
-      <div
-        className="w-1/4 p-4 bg-slate-100 rounded-2xl"
-        ref={sidebarEventsRef}
-      >
-        <h2 className="text-lg font-bold mb-4">Events</h2>
-        <ul>
-          <li
-            title="Drag & Drop on Calender"
-            className="border-medium bg-white rounded-xl text-center cursor-pointer hover:bg-blue-500"
-          >
-            Meeting
-          </li>
-          <li
-            title="Drag & Drop on Calender"
-            className="border-medium bg-white rounded-xl text-center cursor-pointer hover:bg-blue-500"
-          >
-            Lunch
-          </li>
-          <li
-            title="Drag & Drop on Calender"
-            className="border-medium bg-white rounded-xl text-center cursor-pointer hover:bg-blue-500"
-          >
-            Conference
-          </li>
-        </ul>
-      </div>
-      <div className="w-3/4 p-4">
+    <div>
+      <div className=" p-4">
         <FullCalendar
           ref={calendarRef}
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
