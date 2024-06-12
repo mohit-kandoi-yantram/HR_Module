@@ -2,6 +2,7 @@
 import NavBar from '@/app/components/navBar';
 import React, { useState } from 'react';
 // import { BiChevronDown } from 'react-icons/bi';
+//
 import { FaChevronDown } from 'react-icons/fa6';
 import DailyWorkPercentage from './dailyWorkPercentage';
 import WardWiseStaff from './WardWiseStaff';
