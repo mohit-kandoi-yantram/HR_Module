@@ -42,15 +42,14 @@ const items: WorkingHourItems[] = [
 ];
 
 const DashBoard = () => {
+  const [expandedWardWiseStaff, setExpandedWardWiseStaff] = useState(false);
+  const onClickWardWiseStaff = () => {
+    setExpandedWardWiseStaff(!expandedWardWiseStaff);
+  };
   const [expandedDailyWorkPercentage, setExpandedDailyWorkPercentage] =
     useState(false);
   const onClickDailyWorkPercentage = () => {
     setExpandedDailyWorkPercentage(!expandedDailyWorkPercentage);
-  };
-
-  const [expandedWardWiseStaff, setExpandedWardWiseStaff] = useState(false);
-  const onClickWardWiseStaff = () => {
-    setExpandedWardWiseStaff(!expandedWardWiseStaff);
   };
 
   const [expandedWorkingHour, setExpandedWorkingHour] = useState(false);
